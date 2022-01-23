@@ -1,4 +1,4 @@
 var uinput = prompt("Enter password");
-if (uinput == password){
+if (uinput == ${{ secrets.password }}){
     alert("you may pass")
 }
