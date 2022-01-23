@@ -33,7 +33,6 @@ def start():
         start()
 
 def findIfKey(key):
-    matches = db.prefix(key)
     write('Do you wish to read this key or edit it/make new? (type r for read, e for edit or make)')
     command = input()
     if command == 'r':
@@ -68,7 +67,8 @@ while 1 == 1:
     if command == 'all':
         keys = db.keys()
         write('Items (Just type the key to read it)')
-        write(keys)
+        for i in keys:
+            write(i)
         write('Type anything below when you are done')
         a = input()
 
